@@ -1,0 +1,15 @@
+add_action('admin_head', 'my_custom_style'); // admin_head is a hook my_custom_style is a function we are adding it to the hook
+
+function my_custom_style() {
+  echo '<style>
+    #elementor-switch-mode .elementor-switch-mode-on{
+        display: none;    
+    }
+	body.elementor-editor-active #elementor-switch-mode-button{
+	visibility: hidden;
+	}
+	body.elementor-editor-active #elementor-switch-mode-button:hover{
+	visibility: hidden;
+	}
+  </style>';
+}
